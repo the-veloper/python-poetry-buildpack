@@ -64,7 +64,7 @@ fi
 
 if [ "${POETRY_EXPORT_DEV_REQUIREMENTS:-0}" != "0" ] ; then
     log "Enable exporting dev requirements to $REQUIREMENTS_FILE"
-    EXPORT_PARAMETERS+=(--dev)
+    EXPORT_PARAMETERS+=(--with-dev)
 fi
 
 # pip can't handle vcs & editable dependencies when requiring hashes (https://github.com/pypa/pip/issues/4995)
